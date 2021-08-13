@@ -1279,6 +1279,10 @@ contract MiraiMystery is Ownable {
         return nft.ownerOf(_tokenId);
     }
     
+    function returnIndex(uint256 _tokenId) public view returns(uint256) {
+        return nftID[_tokenId];
+    }
+    
     //NFT LOAD / VIEW / DROP RATE FUNCTIONS
     
     function reload(uint256[] calldata _ids, uint256[] calldata _dropRates) public onlyOwner {
@@ -1310,6 +1314,20 @@ contract MiraiMystery is Ownable {
         return nftDropRate; 
     }
     
+    function removeNFT(uint256 _indexPosition) external returns(uint256[] memory) {
+        require(nftID.length == nftDropRate.length);
+        if(_indexPosition >= nftID.length) return nftID;
+        for(uint i = _indexPosition; i < nftID.length - 1; i++) {
+            nftID[i] = nftID[i + 1];
+            nftDropRate[i] = nftDropRate[i + 1];
+        }
+        delete nftID[nftID.length - 1];
+        delete nftDropRate[nftDropRate.length - 1];
+        nftID.pop();
+        return nftID;
+    }
+    
+    
     //PAYABLE FUNCTIONS
     
     receive() external payable {}
@@ -1330,18 +1348,19 @@ contract MiraiMystery is Ownable {
         paid[msg.sender] = true;
     }
     
-    function collectBoxRewards(address _winner, uint256 _tokenId) external {
+    
+    function collectBoxRewards(address _winner, uint256 _tokenId, uint256 _tokenIndex) external {
         require(paid[msg.sender] == true);
-        paid[msg.sender] = false;
         winTransferHandler handler = winTransferHandler(transferHandler);
-        handler.collect(_winner, _tokenId);
+        paid[msg.sender] = false;
+        handler.collect(_winner, _tokenId, _tokenIndex);
     }
     
 }
 
 contract winTransferHandler is Ownable {
     
-    address public miraiMyster;
+    address payable miraiMyster;
     
     IERC721 public nft;
     
@@ -1363,14 +1382,16 @@ contract winTransferHandler is Ownable {
         nftOwner = _owner;
     }
     
-    function setMiraiMyster(address _boxContract) public onlyOwner {
+    function setMiraiMyster(address payable _boxContract) public payable onlyOwner {
         miraiMyster = _boxContract;
     }
     
     //TRANSFER FUNCTIONS
     
-    function collect(address _winner, uint256 _tokenId) external {
+    function collect(address _winner, uint256 _tokenId, uint256 _tokenIndex) external {
         require(msg.sender == miraiMyster);
+        MiraiMystery mirai = MiraiMystery(miraiMyster);
+        mirai.removeNFT(_tokenIndex);
         nft.transferFrom(nftOwner, _winner, _tokenId);
     }
     
