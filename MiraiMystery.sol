@@ -1347,8 +1347,16 @@ contract winTransferHandler is Ownable {
     
     address public nftOwner;
     
+    address public thisContract;
+    
+    //VARIABLE DEFINITION FUNCTIONS
+    
     function setNFT(IERC721 _contract) public onlyOwner {
         nft = _contract;
+    }
+    
+    function setThisContract(address _contract) public onlyOwner {
+        thisContract = _contract;
     }
     
     function setNFTOwner(address _owner) public onlyOwner {
@@ -1359,9 +1367,19 @@ contract winTransferHandler is Ownable {
         miraiMyster = _boxContract;
     }
     
+    //TRANSFER FUNCTIONS
+    
     function collect(address _winner, uint256 _tokenId) external {
         require(msg.sender == miraiMyster);
         nft.transferFrom(nftOwner, _winner, _tokenId);
+    }
+    
+    function setApproval() public onlyOwner {
+        nft.setApprovalForAll(thisContract, true);
+    }
+    
+    function removeApproval() public onlyOwner {
+        nft.setApprovalForAll(thisContract, false);
     }
     
 }
