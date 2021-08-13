@@ -1242,18 +1242,29 @@ contract MiraiMystery is Ownable {
     
     address public thisContract;
     
+    address public transferHandler;
+    
+    address payable boxProceedAddress;
+    
+    uint256 public boxRollPrice;
+    
     IERC721 public nft;
     
     uint256[] public nftID;
     
     uint256[] public nftDropRate;
     
-    mapping(uint256 => uint256) public IdsToDropRate;
+    mapping(address => bool) paid;
+    
     
     //INITIALIZATION FUNCTIONS
     
     function setContract(address payable _contract) public payable onlyOwner {
         thisContract = _contract;
+    }
+    
+    function setTransferHandler(address _handler) public onlyOwner {
+        transferHandler = _handler;
     }
     
     function setNFT(IERC721 _nft) public onlyOwner {
@@ -1268,7 +1279,7 @@ contract MiraiMystery is Ownable {
         return nft.ownerOf(_tokenId);
     }
     
-    //NFT LOADING AND DROP RATE SETTING FUNCTIONS
+    //NFT LOAD / VIEW / DROP RATE FUNCTIONS
     
     function reload(uint256[] calldata _ids, uint256[] calldata _dropRates) public onlyOwner {
         require(_ids.length <= 254);
@@ -1279,12 +1290,78 @@ contract MiraiMystery is Ownable {
         }
     }
     
+    function totalDropRate() public view returns(uint256) {
+        uint256 sum = 0;
+        for(uint i = 0; i < nftDropRate.length; i++) {
+            sum += nftDropRate[i];
+        }
+        return sum;
+    }
+    
+    function viewWinningNFT(uint256 _arrayIndex) public view returns(uint256) {
+        return nftID[_arrayIndex];
+    }
+    
     function viewAvailableNFTs() public view returns(uint256[] memory) {
         return nftID;  
     }
     
     function viewAvailableDropRates() public view returns(uint256[] memory) {
         return nftDropRate; 
+    }
+    
+    //PAYABLE FUNCTIONS
+    
+    receive() external payable {}
+
+    fallback() external payable {}
+    
+    function setBoxProceedAddress(address payable _wallet) public payable onlyOwner {
+        boxProceedAddress = _wallet;
+    }
+    
+    function setBoxRollPrice(uint256 _priceInWei) public onlyOwner {
+        boxRollPrice = _priceInWei;
+    }
+    
+    function openBox() external payable {
+        require(msg.value >= boxRollPrice);
+        require(boxProceedAddress.send(msg.value));
+        paid[msg.sender] = true;
+    }
+    
+    function collectBoxRewards(address _winner, uint256 _tokenId) external {
+        require(paid[msg.sender] == true);
+        paid[msg.sender] = false;
+        winTransferHandler handler = winTransferHandler(transferHandler);
+        handler.collect(_winner, _tokenId);
+    }
+    
+}
+
+contract winTransferHandler is Ownable {
+    
+    address public miraiMyster;
+    
+    IERC721 public nft;
+    
+    address public nftOwner;
+    
+    function setNFT(IERC721 _contract) public onlyOwner {
+        nft = _contract;
+    }
+    
+    function setNFTOwner(address _owner) public onlyOwner {
+        nftOwner = _owner;
+    }
+    
+    function setMiraiMyster(address _boxContract) public onlyOwner {
+        miraiMyster = _boxContract;
+    }
+    
+    function collect(address _winner, uint256 _tokenId) external {
+        require(msg.sender == miraiMyster);
+        nft.transferFrom(nftOwner, _winner, _tokenId);
     }
     
 }
