@@ -1279,10 +1279,6 @@ contract MiraiMystery is Ownable {
         return nft.ownerOf(_tokenId);
     }
     
-    function returnIndex(uint256 _tokenId) public view returns(uint256) {
-        return nftID[_tokenId];
-    }
-    
     //NFT LOAD / VIEW / DROP RATE FUNCTIONS
     
     function reload(uint256[] calldata _ids, uint256[] calldata _dropRates) public onlyOwner {
@@ -1324,6 +1320,7 @@ contract MiraiMystery is Ownable {
         delete nftID[nftID.length - 1];
         delete nftDropRate[nftDropRate.length - 1];
         nftID.pop();
+        nftDropRate.pop();
         return nftID;
     }
     
