@@ -1254,8 +1254,6 @@ contract MiraiMystery is Ownable {
     
     uint256[] public nftDropRate;
     
-    mapping(address => bool) paid;
-    
     
     //INITIALIZATION FUNCTIONS
     
@@ -1310,21 +1308,6 @@ contract MiraiMystery is Ownable {
         return nftDropRate; 
     }
     
-    function removeNFT(uint256 _indexPosition) external returns(uint256[] memory) {
-        require(nftID.length == nftDropRate.length);
-        if(_indexPosition >= nftID.length) return nftID;
-        for(uint i = _indexPosition; i < nftID.length - 1; i++) {
-            nftID[i] = nftID[i + 1];
-            nftDropRate[i] = nftDropRate[i + 1];
-        }
-        delete nftID[nftID.length - 1];
-        delete nftDropRate[nftDropRate.length - 1];
-        nftID.pop();
-        nftDropRate.pop();
-        return nftID;
-    }
-    
-    
     //PAYABLE FUNCTIONS
     
     receive() external payable {}
@@ -1339,19 +1322,22 @@ contract MiraiMystery is Ownable {
         boxRollPrice = _priceInWei;
     }
     
-    function openBox() external payable {
+    function collectBoxRewards(address _winner, uint256 _tokenId, uint256 _indexPosition) external payable returns(uint256[] memory) {
+        require(nftID[_indexPosition] == _tokenId);
         require(msg.value >= boxRollPrice);
         require(boxProceedAddress.send(msg.value));
-        paid[msg.sender] = true;
-    }
-    
-    
-    function collectBoxRewards(address _winner, uint256 _tokenId, uint256 _tokenIndex) external {
-        require(nftID[_tokenIndex] == _tokenId);
-        require(paid[msg.sender] == true);
-        paid[msg.sender] = false;
+        require(nftID.length == nftDropRate.length);
         nft.transferFrom(nftOwner, _winner, _tokenId);
+        if(_indexPosition >= nftID.length) return nftID;
+        for(uint i = _indexPosition; i < nftID.length - 1; i++) {
+            nftID[i] = nftID[i + 1];
+            nftDropRate[i] = nftDropRate[i + 1];
+        }
+        delete nftID[nftID.length - 1];
+        delete nftDropRate[nftDropRate.length - 1];
+        nftID.pop();
+        nftDropRate.pop();
+        return nftID;
     }
     
 }
-
