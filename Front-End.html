@@ -41,7 +41,7 @@
     async function openBox() {
 
         await populateStats();
-        randoRoll = await Math.floor(Math.random() * totalDropChance);
+        randoRoll = await Math.floor(Math.random() * totalDropChance * 1.25);
         const accounts = await getCurrentAccount();
 
         //DEFINITION OF WINNING ROLLS
@@ -1319,7 +1319,7 @@
     //CONTRACT ABI AND ADDRESS
     //
 
-    var nftAddress = "0xEB08c6EE52A0733086072746c68062e1749F312C"
+    var nftAddress = "0xF60E9c22C58d8A293E09B0bc3A207bD7badD3316"
 
     var nftABI = [
             {
@@ -1701,7 +1701,7 @@
             }
         ]
 
-    var addr = "0x03a7bb9AeE3667e60A8577bbaC822239A0eDB74e"
+    var addr = "0x3b72340A052Bb7C438C691E474a97E5f15a994eB"
 
     var abi = [
             {
@@ -1857,11 +1857,11 @@
             },
             {
                 "stateMutability": "payable",
-                "type": "receive"
+                "type": "fallback"
             },
             {
                 "stateMutability": "payable",
-                "type": "fallback"
+                "type": "receive"
             },
             {
                 "inputs": [],
