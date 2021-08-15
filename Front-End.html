@@ -27,6 +27,7 @@
     async function load() {
         await loadWeb3();
         await populateStats();
+        await updateImage();
     }
 
     async function getCurrentAccount() {
@@ -49,600 +50,700 @@
             winningID = availableNFTs[0];
             winningIndex = 0;
             printWin();
+            await updateImage();
             await erc.methods.collectBoxRewards(accounts, winningID, winningIndex).send({ value : boxFee, from : accounts});
         } else
         if((randoRoll > availableDropRates[0] && randoRoll <= availableDropRates[1]) || (randoRoll > availableDropRates[0] && availableNFTs[2] == undefined)) {
             winningID = availableNFTs[1];
             winningIndex = 1;
             printWin();
+            await updateImage();
             await erc.methods.collectBoxRewards(accounts, winningID, winningIndex).send({ value : boxFee, from : accounts});
         } else
         if((randoRoll > availableDropRates[1] && randoRoll <= availableDropRates[2]) || (randoRoll > availableDropRates[1] && availableNFTs[3] == undefined)) {
             winningID = availableNFTs[2];
             winningIndex = 2;
             printWin();
+            await updateImage();
             await erc.methods.collectBoxRewards(accounts, winningID, winningIndex).send({ value : boxFee, from : accounts});
         } else
         if((randoRoll > availableDropRates[2] && randoRoll <= availableDropRates[3]) || (randoRoll > availableDropRates[2] && availableNFTs[4] == undefined)) {
             winningID = availableNFTs[3];
             winningIndex = 3;
             printWin();
+            await updateImage();
             await erc.methods.collectBoxRewards(accounts, winningID, winningIndex).send({ value : boxFee, from : accounts});
         } else
         if((randoRoll > availableDropRates[3] && randoRoll <= availableDropRates[4]) || (randoRoll > availableDropRates[3] && availableNFTs[5] == undefined)) {
             winningID = availableNFTs[4];
             winningIndex = 4;
             printWin();
+            await updateImage();
             await erc.methods.collectBoxRewards(accounts, winningID, winningIndex).send({ value : boxFee, from : accounts});
         } else
         if((randoRoll > availableDropRates[4] && randoRoll <= availableDropRates[5]) || (randoRoll > availableDropRates[4] && availableNFTs[6] == undefined)) {
             winningID = availableNFTs[5];
             winningIndex = 5;
             printWin();
+            await updateImage();
             await erc.methods.collectBoxRewards(accounts, winningID, winningIndex).send({ value : boxFee, from : accounts});
         } else
         if((randoRoll > availableDropRates[5] && randoRoll <= availableDropRates[6]) || (randoRoll > availableDropRates[5] && availableNFTs[7] == undefined)) {
             winningID = availableNFTs[6];
             winningIndex = 6;
             printWin();
+            await updateImage();
             await erc.methods.collectBoxRewards(accounts, winningID, winningIndex).send({ value : boxFee, from : accounts});
         } else
         if((randoRoll > availableDropRates[6] && randoRoll <= availableDropRates[7]) || (randoRoll > availableDropRates[6] && availableNFTs[8] == undefined)) {
             winningID = availableNFTs[7];
             winningIndex = 7;
             printWin();
+            await updateImage();
             await erc.methods.collectBoxRewards(accounts, winningID, winningIndex).send({ value : boxFee, from : accounts});
         } else
         if((randoRoll > availableDropRates[7] && randoRoll <= availableDropRates[8]) || (randoRoll > availableDropRates[7] && availableNFTs[9] == undefined)) {
             winningID = availableNFTs[8];
             winningIndex = 8;
             printWin();
+            await updateImage();
             await erc.methods.collectBoxRewards(accounts, winningID, winningIndex).send({ value : boxFee, from : accounts});
         } else
         if((randoRoll > availableDropRates[8] && randoRoll <= availableDropRates[9]) || (randoRoll > availableDropRates[8] && availableNFTs[10] == undefined)) {
             winningID = availableNFTs[9];
             winningIndex = 9;
             printWin();
+            await updateImage();
             await erc.methods.collectBoxRewards(accounts, winningID, winningIndex).send({ value : boxFee, from : accounts});
         } else
         if((randoRoll > availableDropRates[9] && randoRoll <= availableDropRates[10]) || (randoRoll > availableDropRates[9] && availableNFTs[11] == undefined)) {
             winningID = availableNFTs[10];
             winningIndex = 10;
             printWin();
+            await updateImage();
             await erc.methods.collectBoxRewards(accounts, winningID, winningIndex).send({ value : boxFee, from : accounts});
         } else
         if((randoRoll > availableDropRates[10] && randoRoll <= availableDropRates[11]) || (randoRoll > availableDropRates[10] && availableNFTs[12] == undefined)) {
             winningID = availableNFTs[11];
             winningIndex = 11;
             printWin();
+            await updateImage();
             await erc.methods.collectBoxRewards(accounts, winningID, winningIndex).send({ value : boxFee, from : accounts});
         } else
         if((randoRoll > availableDropRates[11] && randoRoll <= availableDropRates[12]) || (randoRoll > availableDropRates[11] && availableNFTs[13] == undefined)) {
             winningID = availableNFTs[12];
             winningIndex = 12;
             printWin();
+            await updateImage();
             await erc.methods.collectBoxRewards(accounts, winningID, winningIndex).send({ value : boxFee, from : accounts});
         } else
         if((randoRoll > availableDropRates[12] && randoRoll <= availableDropRates[13]) || (randoRoll > availableDropRates[12] && availableNFTs[14] == undefined)) {
             winningID = availableNFTs[13];
             winningIndex = 13;
             printWin();
+            await updateImage();
             await erc.methods.collectBoxRewards(accounts, winningID, winningIndex).send({ value : boxFee, from : accounts});
         } else
         if((randoRoll > availableDropRates[13] && randoRoll <= availableDropRates[14]) || (randoRoll > availableDropRates[13] && availableNFTs[15] == undefined)) {
             winningID = availableNFTs[14];
             winningIndex = 14;
             printWin();
+            await updateImage();
             await erc.methods.collectBoxRewards(accounts, winningID, winningIndex).send({ value : boxFee, from : accounts});
         } else
         if((randoRoll > availableDropRates[14] && randoRoll <= availableDropRates[15]) || (randoRoll > availableDropRates[14] && availableNFTs[16] == undefined)) {
             winningID = availableNFTs[15];
             winningIndex = 15;
             printWin();
+            await updateImage();
             await erc.methods.collectBoxRewards(accounts, winningID, winningIndex).send({ value : boxFee, from : accounts});
         } else
         if((randoRoll > availableDropRates[15] && randoRoll <= availableDropRates[16]) || (randoRoll > availableDropRates[15] && availableNFTs[17] == undefined)) {
             winningID = availableNFTs[16];
             winningIndex = 16;
             printWin();
+            await updateImage();
             await erc.methods.collectBoxRewards(accounts, winningID, winningIndex).send({ value : boxFee, from : accounts});
         } else
         if((randoRoll > availableDropRates[16] && randoRoll <= availableDropRates[17]) || (randoRoll > availableDropRates[16] && availableNFTs[18] == undefined)) {
             winningID = availableNFTs[17];
             winningIndex = 17;
             printWin();
+            await updateImage();
             await erc.methods.collectBoxRewards(accounts, winningID, winningIndex).send({ value : boxFee, from : accounts});
         } else
         if((randoRoll > availableDropRates[17] && randoRoll <= availableDropRates[18]) || (randoRoll > availableDropRates[17] && availableNFTs[19] == undefined)) {
             winningID = availableNFTs[18];
             winningIndex = 18;
             printWin();
+            await updateImage();
             await erc.methods.collectBoxRewards(accounts, winningID, winningIndex).send({ value : boxFee, from : accounts});
         } else
         if((randoRoll > availableDropRates[18] && randoRoll <= availableDropRates[19]) || (randoRoll > availableDropRates[18] && availableNFTs[20] == undefined)) {
             winningID = availableNFTs[19];
             winningIndex = 19;
             printWin();
+            await updateImage();
             await erc.methods.collectBoxRewards(accounts, winningID, winningIndex).send({ value : boxFee, from : accounts});
         } else
         if((randoRoll > availableDropRates[19] && randoRoll <= availableDropRates[20]) || (randoRoll > availableDropRates[19] && availableNFTs[21] == undefined)) {
             winningID = availableNFTs[20];
             winningIndex = 20;
             printWin();
+            await updateImage();
             await erc.methods.collectBoxRewards(accounts, winningID, winningIndex).send({ value : boxFee, from : accounts});
         } else
         if((randoRoll > availableDropRates[20] && randoRoll <= availableDropRates[21]) || (randoRoll > availableDropRates[20] && availableNFTs[22] == undefined)) {
             winningID = availableNFTs[21];
             winningIndex = 21;
             printWin();
+            await updateImage();
             await erc.methods.collectBoxRewards(accounts, winningID, winningIndex).send({ value : boxFee, from : accounts});
         } else
         if((randoRoll > availableDropRates[21] && randoRoll <= availableDropRates[22]) || (randoRoll > availableDropRates[21] && availableNFTs[23] == undefined)) {
             winningID = availableNFTs[22];
             winningIndex = 22;
             printWin();
+            await updateImage();
             await erc.methods.collectBoxRewards(accounts, winningID, winningIndex).send({ value : boxFee, from : accounts});
         } else
         if((randoRoll > availableDropRates[22] && randoRoll <= availableDropRates[23]) || (randoRoll > availableDropRates[22] && availableNFTs[24] == undefined)) {
             winningID = availableNFTs[23];
             winningIndex = 23;
             printWin();
+            await updateImage();
             await erc.methods.collectBoxRewards(accounts, winningID, winningIndex).send({ value : boxFee, from : accounts});
         } else
         if((randoRoll > availableDropRates[23] && randoRoll <= availableDropRates[24]) || (randoRoll > availableDropRates[23] && availableNFTs[25] == undefined)) {
             winningID = availableNFTs[24];
             winningIndex = 24;
             printWin();
+            await updateImage();
             await erc.methods.collectBoxRewards(accounts, winningID, winningIndex).send({ value : boxFee, from : accounts});
         } else
         if((randoRoll > availableDropRates[24] && randoRoll <= availableDropRates[25]) || (randoRoll > availableDropRates[24] && availableNFTs[26] == undefined)) {
             winningID = availableNFTs[25];
             winningIndex = 25;
             printWin();
+            await updateImage();
             await erc.methods.collectBoxRewards(accounts, winningID, winningIndex).send({ value : boxFee, from : accounts});
         } else
         if((randoRoll > availableDropRates[25] && randoRoll <= availableDropRates[26]) || (randoRoll > availableDropRates[25] && availableNFTs[27] == undefined)) {
             winningID = availableNFTs[26];
             winningIndex = 26;
             printWin();
+            await updateImage();
             await erc.methods.collectBoxRewards(accounts, winningID, winningIndex).send({ value : boxFee, from : accounts});
         } else
         if((randoRoll > availableDropRates[26] && randoRoll <= availableDropRates[27]) || (randoRoll > availableDropRates[26] && availableNFTs[28] == undefined)) {
             winningID = availableNFTs[27];
             winningIndex = 27;
             printWin();
+            await updateImage();
             await erc.methods.collectBoxRewards(accounts, winningID, winningIndex).send({ value : boxFee, from : accounts});
         } else
         if((randoRoll > availableDropRates[27] && randoRoll <= availableDropRates[28]) || (randoRoll > availableDropRates[27] && availableNFTs[29] == undefined)) {
             winningID = availableNFTs[28];
             winningIndex = 28;
             printWin();
+            await updateImage();
             await erc.methods.collectBoxRewards(accounts, winningID, winningIndex).send({ value : boxFee, from : accounts});
         } else
         if((randoRoll > availableDropRates[28] && randoRoll <= availableDropRates[29]) || (randoRoll > availableDropRates[28] && availableNFTs[30] == undefined)) {
             winningID = availableNFTs[29];
             winningIndex = 29;
             printWin();
+            await updateImage();
             await erc.methods.collectBoxRewards(accounts, winningID, winningIndex).send({ value : boxFee, from : accounts});
         } else
         if((randoRoll > availableDropRates[29] && randoRoll <= availableDropRates[30]) || (randoRoll > availableDropRates[29] && availableNFTs[31] == undefined)) {
             winningID = availableNFTs[30];
             winningIndex = 30;
             printWin();
+            await updateImage();
             await erc.methods.collectBoxRewards(accounts, winningID, winningIndex).send({ value : boxFee, from : accounts});
         } else
         if((randoRoll > availableDropRates[30] && randoRoll <= availableDropRates[31]) || (randoRoll > availableDropRates[30] && availableNFTs[32] == undefined)) {
             winningID = availableNFTs[31];
             winningIndex = 31;
             printWin();
+            await updateImage();
             await erc.methods.collectBoxRewards(accounts, winningID, winningIndex).send({ value : boxFee, from : accounts});
         } else
         if((randoRoll > availableDropRates[31] && randoRoll <= availableDropRates[32]) || (randoRoll > availableDropRates[31] && availableNFTs[33] == undefined)) {
             winningID = availableNFTs[32];
             winningIndex = 32;
             printWin();
+            await updateImage();
             await erc.methods.collectBoxRewards(accounts, winningID, winningIndex).send({ value : boxFee, from : accounts});
         } else
         if((randoRoll > availableDropRates[32] && randoRoll <= availableDropRates[33]) || (randoRoll > availableDropRates[32] && availableNFTs[34] == undefined)) {
             winningID = availableNFTs[33];
             winningIndex = 33;
             printWin();
+            await updateImage();
             await erc.methods.collectBoxRewards(accounts, winningID, winningIndex).send({ value : boxFee, from : accounts});
         } else
         if((randoRoll > availableDropRates[33] && randoRoll <= availableDropRates[34]) || (randoRoll > availableDropRates[33] && availableNFTs[35] == undefined)) {
             winningID = availableNFTs[34];
             winningIndex = 34;
             printWin();
+            await updateImage();
             await erc.methods.collectBoxRewards(accounts, winningID, winningIndex).send({ value : boxFee, from : accounts});
         } else
         if((randoRoll > availableDropRates[34] && randoRoll <= availableDropRates[35]) || (randoRoll > availableDropRates[34] && availableNFTs[36] == undefined)) {
             winningID = availableNFTs[35];
             winningIndex = 35;
             printWin();
+            await updateImage();
             await erc.methods.collectBoxRewards(accounts, winningID, winningIndex).send({ value : boxFee, from : accounts});
         } else
         if((randoRoll > availableDropRates[35] && randoRoll <= availableDropRates[36]) || (randoRoll > availableDropRates[35] && availableNFTs[37] == undefined)) {
             winningID = availableNFTs[36];
             winningIndex = 36;
             printWin();
+            await updateImage();
             await erc.methods.collectBoxRewards(accounts, winningID, winningIndex).send({ value : boxFee, from : accounts});
         } else
         if((randoRoll > availableDropRates[36] && randoRoll <= availableDropRates[37]) || (randoRoll > availableDropRates[36] && availableNFTs[38] == undefined)) {
             winningID = availableNFTs[37];
             winningIndex = 37;
             printWin();
+            await updateImage();
             await erc.methods.collectBoxRewards(accounts, winningID, winningIndex).send({ value : boxFee, from : accounts});
         } else
         if((randoRoll > availableDropRates[37] && randoRoll <= availableDropRates[38]) || (randoRoll > availableDropRates[37] && availableNFTs[39] == undefined)) {
             winningID = availableNFTs[38];
             winningIndex = 38;
             printWin();
+            await updateImage();
             await erc.methods.collectBoxRewards(accounts, winningID, winningIndex).send({ value : boxFee, from : accounts});
         } else
         if((randoRoll > availableDropRates[38] && randoRoll <= availableDropRates[39]) || (randoRoll > availableDropRates[38] && availableNFTs[40] == undefined)) {
             winningID = availableNFTs[39];
             winningIndex = 39;
             printWin();
+            await updateImage();
             await erc.methods.collectBoxRewards(accounts, winningID, winningIndex).send({ value : boxFee, from : accounts});
         } else
         if((randoRoll > availableDropRates[39] && randoRoll <= availableDropRates[40]) || (randoRoll > availableDropRates[39] && availableNFTs[41] == undefined)) {
             winningID = availableNFTs[40];
             winningIndex = 40;
             printWin();
+            await updateImage();
             await erc.methods.collectBoxRewards(accounts, winningID, winningIndex).send({ value : boxFee, from : accounts});
         } else
         if((randoRoll > availableDropRates[40] && randoRoll <= availableDropRates[41]) || (randoRoll > availableDropRates[40] && availableNFTs[42] == undefined)) {
             winningID = availableNFTs[41];
             winningIndex = 41;
             printWin();
+            await updateImage();
             await erc.methods.collectBoxRewards(accounts, winningID, winningIndex).send({ value : boxFee, from : accounts});
         } else
         if((randoRoll > availableDropRates[41] && randoRoll <= availableDropRates[42]) || (randoRoll > availableDropRates[41] && availableNFTs[43] == undefined)) {
             winningID = availableNFTs[42];
             winningIndex = 42;
             printWin();
+            await updateImage();
             await erc.methods.collectBoxRewards(accounts, winningID, winningIndex).send({ value : boxFee, from : accounts});
         } else
         if((randoRoll > availableDropRates[42] && randoRoll <= availableDropRates[43]) || (randoRoll > availableDropRates[42] && availableNFTs[44] == undefined)) {
             winningID = availableNFTs[43];
             winningIndex = 43;
             printWin();
+            await updateImage();
             await erc.methods.collectBoxRewards(accounts, winningID, winningIndex).send({ value : boxFee, from : accounts});
         } else
         if((randoRoll > availableDropRates[43] && randoRoll <= availableDropRates[44]) || (randoRoll > availableDropRates[43] && availableNFTs[45] == undefined)) {
             winningID = availableNFTs[44];
             winningIndex = 44;
             printWin();
+            await updateImage();
             await erc.methods.collectBoxRewards(accounts, winningID, winningIndex).send({ value : boxFee, from : accounts});
         } else
         if((randoRoll > availableDropRates[44] && randoRoll <= availableDropRates[45]) || (randoRoll > availableDropRates[44] && availableNFTs[46] == undefined)) {
             winningID = availableNFTs[45];
             winningIndex = 45;
             printWin();
+            await updateImage();
             await erc.methods.collectBoxRewards(accounts, winningID, winningIndex).send({ value : boxFee, from : accounts});
         } else
         if((randoRoll > availableDropRates[45] && randoRoll <= availableDropRates[46]) || (randoRoll > availableDropRates[45] && availableNFTs[47] == undefined)) {
             winningID = availableNFTs[46];
             winningIndex = 46;
             printWin();
+            await updateImage();
             await erc.methods.collectBoxRewards(accounts, winningID, winningIndex).send({ value : boxFee, from : accounts});
         } else
         if((randoRoll > availableDropRates[46] && randoRoll <= availableDropRates[47]) || (randoRoll > availableDropRates[46] && availableNFTs[48] == undefined)) {
             winningID = availableNFTs[47];
             winningIndex = 47;
             printWin();
+            await updateImage();
             await erc.methods.collectBoxRewards(accounts, winningID, winningIndex).send({ value : boxFee, from : accounts});
         } else
         if((randoRoll > availableDropRates[47] && randoRoll <= availableDropRates[48]) || (randoRoll > availableDropRates[47] && availableNFTs[49] == undefined)) {
             winningID = availableNFTs[48];
             winningIndex = 48;
             printWin();
+            await updateImage();
             await erc.methods.collectBoxRewards(accounts, winningID, winningIndex).send({ value : boxFee, from : accounts});
         } else
         if((randoRoll > availableDropRates[48] && randoRoll <= availableDropRates[49]) || (randoRoll > availableDropRates[48] && availableNFTs[50] == undefined)) {
             winningID = availableNFTs[49];
             winningIndex = 49;
             printWin();
+            await updateImage();
             await erc.methods.collectBoxRewards(accounts, winningID, winningIndex).send({ value : boxFee, from : accounts});
         } else
         if((randoRoll > availableDropRates[49] && randoRoll <= availableDropRates[50]) || (randoRoll > availableDropRates[49] && availableNFTs[51] == undefined)) {
             winningID = availableNFTs[50];
             winningIndex = 50;
             printWin();
+            await updateImage();
             await erc.methods.collectBoxRewards(accounts, winningID, winningIndex).send({ value : boxFee, from : accounts});
         } else
         if((randoRoll > availableDropRates[50] && randoRoll <= availableDropRates[51]) || (randoRoll > availableDropRates[50] && availableNFTs[52] == undefined)) {
             winningID = availableNFTs[51];
             winningIndex = 51;
             printWin();
+            await updateImage();
             await erc.methods.collectBoxRewards(accounts, winningID, winningIndex).send({ value : boxFee, from : accounts});
         } else
         if((randoRoll > availableDropRates[51] && randoRoll <= availableDropRates[52]) || (randoRoll > availableDropRates[51] && availableNFTs[53] == undefined)) {
             winningID = availableNFTs[52];
             winningIndex = 52;
             printWin();
+            await updateImage();
             await erc.methods.collectBoxRewards(accounts, winningID, winningIndex).send({ value : boxFee, from : accounts});
         } else
         if((randoRoll > availableDropRates[52] && randoRoll <= availableDropRates[53]) || (randoRoll > availableDropRates[52] && availableNFTs[54] == undefined)) {
             winningID = availableNFTs[53];
             winningIndex = 53;
             printWin();
+            await updateImage();
             await erc.methods.collectBoxRewards(accounts, winningID, winningIndex).send({ value : boxFee, from : accounts});
         } else
         if((randoRoll > availableDropRates[53] && randoRoll <= availableDropRates[54]) || (randoRoll > availableDropRates[53] && availableNFTs[55] == undefined)) {
             winningID = availableNFTs[54];
             winningIndex = 54;
             printWin();
+            await updateImage();
             await erc.methods.collectBoxRewards(accounts, winningID, winningIndex).send({ value : boxFee, from : accounts});
         } else
         if((randoRoll > availableDropRates[54] && randoRoll <= availableDropRates[55]) || (randoRoll > availableDropRates[54] && availableNFTs[56] == undefined)) {
             winningID = availableNFTs[55];
             winningIndex = 55;
             printWin();
+            await updateImage();
             await erc.methods.collectBoxRewards(accounts, winningID, winningIndex).send({ value : boxFee, from : accounts});
         } else
         if((randoRoll > availableDropRates[55] && randoRoll <= availableDropRates[56]) || (randoRoll > availableDropRates[55] && availableNFTs[57] == undefined)) {
             winningID = availableNFTs[56];
             winningIndex = 56;
             printWin();
+            await updateImage();
             await erc.methods.collectBoxRewards(accounts, winningID, winningIndex).send({ value : boxFee, from : accounts});
         } else
         if((randoRoll > availableDropRates[56] && randoRoll <= availableDropRates[57]) || (randoRoll > availableDropRates[56] && availableNFTs[58] == undefined)) {
             winningID = availableNFTs[57];
             winningIndex = 57;
             printWin();
+            await updateImage();
             await erc.methods.collectBoxRewards(accounts, winningID, winningIndex).send({ value : boxFee, from : accounts});
         } else
         if((randoRoll > availableDropRates[57] && randoRoll <= availableDropRates[58]) || (randoRoll > availableDropRates[57] && availableNFTs[59] == undefined)) {
             winningID = availableNFTs[58];
             winningIndex = 58;
             printWin();
+            await updateImage();
             await erc.methods.collectBoxRewards(accounts, winningID, winningIndex).send({ value : boxFee, from : accounts});
         } else
         if((randoRoll > availableDropRates[58] && randoRoll <= availableDropRates[59]) || (randoRoll > availableDropRates[58] && availableNFTs[60] == undefined)) {
             winningID = availableNFTs[59];
             winningIndex = 59;
             printWin();
+            await updateImage();
             await erc.methods.collectBoxRewards(accounts, winningID, winningIndex).send({ value : boxFee, from : accounts});
         } else
         if((randoRoll > availableDropRates[59] && randoRoll <= availableDropRates[60]) || (randoRoll > availableDropRates[59] && availableNFTs[61] == undefined)) {
             winningID = availableNFTs[60];
             winningIndex = 60;
             printWin();
+            await updateImage();
             await erc.methods.collectBoxRewards(accounts, winningID, winningIndex).send({ value : boxFee, from : accounts});
         } else
         if((randoRoll > availableDropRates[60] && randoRoll <= availableDropRates[61]) || (randoRoll > availableDropRates[60] && availableNFTs[62] == undefined)) {
             winningID = availableNFTs[61];
             winningIndex = 61;
             printWin();
+            await updateImage();
             await erc.methods.collectBoxRewards(accounts, winningID, winningIndex).send({ value : boxFee, from : accounts});
         } else
         if((randoRoll > availableDropRates[61] && randoRoll <= availableDropRates[62]) || (randoRoll > availableDropRates[61] && availableNFTs[63] == undefined)) {
             winningID = availableNFTs[62];
             winningIndex = 62;
             printWin();
+            await updateImage();
             await erc.methods.collectBoxRewards(accounts, winningID, winningIndex).send({ value : boxFee, from : accounts});
         } else
         if((randoRoll > availableDropRates[62] && randoRoll <= availableDropRates[63]) || (randoRoll > availableDropRates[62] && availableNFTs[64] == undefined)) {
             winningID = availableNFTs[63];
             winningIndex = 63;
             printWin();
+            await updateImage();
             await erc.methods.collectBoxRewards(accounts, winningID, winningIndex).send({ value : boxFee, from : accounts});
         } else
         if((randoRoll > availableDropRates[63] && randoRoll <= availableDropRates[64]) || (randoRoll > availableDropRates[63] && availableNFTs[65] == undefined)) {
             winningID = availableNFTs[64];
             winningIndex = 64;
             printWin();
+            await updateImage();
             await erc.methods.collectBoxRewards(accounts, winningID, winningIndex).send({ value : boxFee, from : accounts});
         } else
         if((randoRoll > availableDropRates[64] && randoRoll <= availableDropRates[65]) || (randoRoll > availableDropRates[64] && availableNFTs[66] == undefined)) {
             winningID = availableNFTs[65];
             winningIndex = 65;
             printWin();
+            await updateImage();
             await erc.methods.collectBoxRewards(accounts, winningID, winningIndex).send({ value : boxFee, from : accounts});
         } else
         if((randoRoll > availableDropRates[65] && randoRoll <= availableDropRates[66]) || (randoRoll > availableDropRates[65] && availableNFTs[67] == undefined)) {
             winningID = availableNFTs[66];
             winningIndex = 66;
             printWin();
+            await updateImage();
             await erc.methods.collectBoxRewards(accounts, winningID, winningIndex).send({ value : boxFee, from : accounts});
         } else
         if((randoRoll > availableDropRates[66] && randoRoll <= availableDropRates[67]) || (randoRoll > availableDropRates[66] && availableNFTs[68] == undefined)) {
             winningID = availableNFTs[67];
             winningIndex = 67;
             printWin();
+            await updateImage();
             await erc.methods.collectBoxRewards(accounts, winningID, winningIndex).send({ value : boxFee, from : accounts});
         } else
         if((randoRoll > availableDropRates[67] && randoRoll <= availableDropRates[68]) || (randoRoll > availableDropRates[67] && availableNFTs[69] == undefined)) {
             winningID = availableNFTs[68];
             winningIndex = 68;
             printWin();
+            await updateImage();
             await erc.methods.collectBoxRewards(accounts, winningID, winningIndex).send({ value : boxFee, from : accounts});
         } else
         if((randoRoll > availableDropRates[68] && randoRoll <= availableDropRates[69]) || (randoRoll > availableDropRates[68] && availableNFTs[70] == undefined)) {
             winningID = availableNFTs[69];
             winningIndex = 69;
             printWin();
+            await updateImage();
             await erc.methods.collectBoxRewards(accounts, winningID, winningIndex).send({ value : boxFee, from : accounts});
         } else
         if((randoRoll > availableDropRates[69] && randoRoll <= availableDropRates[70]) || (randoRoll > availableDropRates[69] && availableNFTs[71] == undefined)) {
             winningID = availableNFTs[70];
             winningIndex = 70;
             printWin();
+            await updateImage();
             await erc.methods.collectBoxRewards(accounts, winningID, winningIndex).send({ value : boxFee, from : accounts});
         } else
         if((randoRoll > availableDropRates[70] && randoRoll <= availableDropRates[71]) || (randoRoll > availableDropRates[70] && availableNFTs[72] == undefined)) {
             winningID = availableNFTs[71];
             winningIndex = 71;
             printWin();
+            await updateImage();
             await erc.methods.collectBoxRewards(accounts, winningID, winningIndex).send({ value : boxFee, from : accounts});
         } else
         if((randoRoll > availableDropRates[71] && randoRoll <= availableDropRates[72]) || (randoRoll > availableDropRates[71] && availableNFTs[73] == undefined)) {
             winningID = availableNFTs[72];
             winningIndex = 72;
             printWin();
+            await updateImage();
             await erc.methods.collectBoxRewards(accounts, winningID, winningIndex).send({ value : boxFee, from : accounts});
         } else
         if((randoRoll > availableDropRates[72] && randoRoll <= availableDropRates[73]) || (randoRoll > availableDropRates[72] && availableNFTs[74] == undefined)) {
             winningID = availableNFTs[73];
             winningIndex = 73;
             printWin();
+            await updateImage();
             await erc.methods.collectBoxRewards(accounts, winningID, winningIndex).send({ value : boxFee, from : accounts});
         } else
         if((randoRoll > availableDropRates[73] && randoRoll <= availableDropRates[74]) || (randoRoll > availableDropRates[73] && availableNFTs[75] == undefined)) {
             winningID = availableNFTs[74];
             winningIndex = 74;
             printWin();
+            await updateImage();
             await erc.methods.collectBoxRewards(accounts, winningID, winningIndex).send({ value : boxFee, from : accounts});
         } else
         if((randoRoll > availableDropRates[74] && randoRoll <= availableDropRates[75]) || (randoRoll > availableDropRates[74] && availableNFTs[76] == undefined)) {
             winningID = availableNFTs[75];
             winningIndex = 75;
             printWin();
+            await updateImage();
             await erc.methods.collectBoxRewards(accounts, winningID, winningIndex).send({ value : boxFee, from : accounts});
         } else
         if((randoRoll > availableDropRates[75] && randoRoll <= availableDropRates[76]) || (randoRoll > availableDropRates[75] && availableNFTs[77] == undefined)) {
             winningID = availableNFTs[76];
             winningIndex = 76;
             printWin();
+            await updateImage();
             await erc.methods.collectBoxRewards(accounts, winningID, winningIndex).send({ value : boxFee, from : accounts});
         } else
         if((randoRoll > availableDropRates[76] && randoRoll <= availableDropRates[77]) || (randoRoll > availableDropRates[76] && availableNFTs[78] == undefined)) {
             winningID = availableNFTs[77];
             winningIndex = 77;
             printWin();
+            await updateImage();
             await erc.methods.collectBoxRewards(accounts, winningID, winningIndex).send({ value : boxFee, from : accounts});
         } else
         if((randoRoll > availableDropRates[77] && randoRoll <= availableDropRates[78]) || (randoRoll > availableDropRates[77] && availableNFTs[79] == undefined)) {
             winningID = availableNFTs[78];
             winningIndex = 78;
             printWin();
+            await updateImage();
             await erc.methods.collectBoxRewards(accounts, winningID, winningIndex).send({ value : boxFee, from : accounts});
         } else
         if((randoRoll > availableDropRates[78] && randoRoll <= availableDropRates[79]) || (randoRoll > availableDropRates[78] && availableNFTs[80] == undefined)) {
             winningID = availableNFTs[79];
             winningIndex = 79;
             printWin();
+            await updateImage();
             await erc.methods.collectBoxRewards(accounts, winningID, winningIndex).send({ value : boxFee, from : accounts});
         } else
         if((randoRoll > availableDropRates[79] && randoRoll <= availableDropRates[80]) || (randoRoll > availableDropRates[79] && availableNFTs[81] == undefined)) {
             winningID = availableNFTs[80];
             winningIndex = 80;
             printWin();
+            await updateImage();
             await erc.methods.collectBoxRewards(accounts, winningID, winningIndex).send({ value : boxFee, from : accounts});
         } else
         if((randoRoll > availableDropRates[80] && randoRoll <= availableDropRates[81]) || (randoRoll > availableDropRates[80] && availableNFTs[82] == undefined)) {
             winningID = availableNFTs[81];
             winningIndex = 81;
             printWin();
+            await updateImage();
             await erc.methods.collectBoxRewards(accounts, winningID, winningIndex).send({ value : boxFee, from : accounts});
         } else
         if((randoRoll > availableDropRates[81] && randoRoll <= availableDropRates[82]) || (randoRoll > availableDropRates[81] && availableNFTs[83] == undefined)) {
             winningID = availableNFTs[82];
             winningIndex = 82;
             printWin();
+            await updateImage();
             await erc.methods.collectBoxRewards(accounts, winningID, winningIndex).send({ value : boxFee, from : accounts});
         } else
         if((randoRoll > availableDropRates[82] && randoRoll <= availableDropRates[83]) || (randoRoll > availableDropRates[82] && availableNFTs[84] == undefined)) {
             winningID = availableNFTs[83];
             winningIndex = 83;
             printWin();
+            await updateImage();
             await erc.methods.collectBoxRewards(accounts, winningID, winningIndex).send({ value : boxFee, from : accounts});
         } else
         if((randoRoll > availableDropRates[83] && randoRoll <= availableDropRates[84]) || (randoRoll > availableDropRates[83] && availableNFTs[85] == undefined)) {
             winningID = availableNFTs[84];
             winningIndex = 84;
             printWin();
+            await updateImage();
             await erc.methods.collectBoxRewards(accounts, winningID, winningIndex).send({ value : boxFee, from : accounts});
         } else
         if((randoRoll > availableDropRates[84] && randoRoll <= availableDropRates[85]) || (randoRoll > availableDropRates[84] && availableNFTs[86] == undefined)) {
             winningID = availableNFTs[85];
             winningIndex = 85;
             printWin();
+            await updateImage();
             await erc.methods.collectBoxRewards(accounts, winningID, winningIndex).send({ value : boxFee, from : accounts});
         } else
         if((randoRoll > availableDropRates[85] && randoRoll <= availableDropRates[86]) || (randoRoll > availableDropRates[85] && availableNFTs[87] == undefined)) {
             winningID = availableNFTs[86];
             winningIndex = 86;
             printWin();
+            await updateImage();
             await erc.methods.collectBoxRewards(accounts, winningID, winningIndex).send({ value : boxFee, from : accounts});
         } else
         if((randoRoll > availableDropRates[86] && randoRoll <= availableDropRates[87]) || (randoRoll > availableDropRates[86] && availableNFTs[88] == undefined)) {
             winningID = availableNFTs[87];
             winningIndex = 87;
             printWin();
+            await updateImage();
             await erc.methods.collectBoxRewards(accounts, winningID, winningIndex).send({ value : boxFee, from : accounts});
         } else
         if((randoRoll > availableDropRates[87] && randoRoll <= availableDropRates[88]) || (randoRoll > availableDropRates[87] && availableNFTs[89] == undefined)) {
             winningID = availableNFTs[88];
             winningIndex = 88;
             printWin();
+            await updateImage();
             await erc.methods.collectBoxRewards(accounts, winningID, winningIndex).send({ value : boxFee, from : accounts});
         } else
         if((randoRoll > availableDropRates[88] && randoRoll <= availableDropRates[89]) || (randoRoll > availableDropRates[88] && availableNFTs[90] == undefined)) {
             winningID = availableNFTs[89];
             winningIndex = 89;
             printWin();
+            await updateImage();
             await erc.methods.collectBoxRewards(accounts, winningID, winningIndex).send({ value : boxFee, from : accounts});
         } else
         if((randoRoll > availableDropRates[89] && randoRoll <= availableDropRates[90]) || (randoRoll > availableDropRates[89] && availableNFTs[91] == undefined)) {
             winningID = availableNFTs[90];
             winningIndex = 90;
             printWin();
+            await updateImage();
             await erc.methods.collectBoxRewards(accounts, winningID, winningIndex).send({ value : boxFee, from : accounts});
         } else
         if((randoRoll > availableDropRates[90] && randoRoll <= availableDropRates[91]) || (randoRoll > availableDropRates[90] && availableNFTs[92] == undefined)) {
             winningID = availableNFTs[91];
             winningIndex = 91;
             printWin();
+            await updateImage();
             await erc.methods.collectBoxRewards(accounts, winningID, winningIndex).send({ value : boxFee, from : accounts});
         } else
         if((randoRoll > availableDropRates[91] && randoRoll <= availableDropRates[92]) || (randoRoll > availableDropRates[91] && availableNFTs[93] == undefined)) {
             winningID = availableNFTs[92];
             winningIndex = 92;
             printWin();
+            await updateImage();
             await erc.methods.collectBoxRewards(accounts, winningID, winningIndex).send({ value : boxFee, from : accounts});
         } else
         if((randoRoll > availableDropRates[92] && randoRoll <= availableDropRates[93]) || (randoRoll > availableDropRates[92] && availableNFTs[94] == undefined)) {
             winningID = availableNFTs[93];
             winningIndex = 93;
             printWin();
+            await updateImage();
             await erc.methods.collectBoxRewards(accounts, winningID, winningIndex).send({ value : boxFee, from : accounts});
         } else
         if((randoRoll > availableDropRates[93] && randoRoll <= availableDropRates[94]) || (randoRoll > availableDropRates[93] && availableNFTs[95] == undefined)) {
             winningID = availableNFTs[94];
             winningIndex = 94;
             printWin();
+            await updateImage();
             await erc.methods.collectBoxRewards(accounts, winningID, winningIndex).send({ value : boxFee, from : accounts});
         } else
         if((randoRoll > availableDropRates[94] && randoRoll <= availableDropRates[95]) || (randoRoll > availableDropRates[94] && availableNFTs[96] == undefined)) {
             winningID = availableNFTs[95];
             winningIndex = 95;
             printWin();
+            await updateImage();
             await erc.methods.collectBoxRewards(accounts, winningID, winningIndex).send({ value : boxFee, from : accounts});
         } else
         if((randoRoll > availableDropRates[95] && randoRoll <= availableDropRates[96]) || (randoRoll > availableDropRates[95] && availableNFTs[97] == undefined)) {
             winningID = availableNFTs[96];
             winningIndex = 96;
             printWin();
+            await updateImage();
             await erc.methods.collectBoxRewards(accounts, winningID, winningIndex).send({ value : boxFee, from : accounts});
         } else
         if((randoRoll > availableDropRates[96] && randoRoll <= availableDropRates[97]) || (randoRoll > availableDropRates[96] && availableNFTs[98] == undefined)) {
             winningID = availableNFTs[97];
             winningIndex = 97;
             printWin();
+            await updateImage();
             await erc.methods.collectBoxRewards(accounts, winningID, winningIndex).send({ value : boxFee, from : accounts});
         } else
         if((randoRoll > availableDropRates[97] && randoRoll <= availableDropRates[98]) || (randoRoll > availableDropRates[97] && availableNFTs[99] == undefined)) {
             winningID = availableNFTs[98];
             winningIndex = 98;
             printWin();
+            await updateImage();
             await erc.methods.collectBoxRewards(accounts, winningID, winningIndex).send({ value : boxFee, from : accounts});
         } else
         if((randoRoll > availableDropRates[98] && randoRoll <= availableDropRates[99]) || (randoRoll > availableDropRates[98] && availableNFTs[100] == undefined)) {
             winningID = availableNFTs[99];
             winningIndex = 99;
             printWin();
+            await updateImage();
             await erc.methods.collectBoxRewards(accounts, winningID, winningIndex).send({ value : boxFee, from : accounts});
         }
         if(availableNFTs == false) {
@@ -701,6 +802,519 @@
     var totalDropChance;
 
     var availableDropRates;
+
+    //VARIABLE DEFINITION
+    //FOR NFT IMAGES
+
+    var nftImage;
+
+    async function updateImage() {
+        if(winningID == nft0) {
+            nftImage = "https://ipfs.io/ipfs/QmRbtiMiCoAx3cJVXrHKwJfD7nGDgqbrcnzDWZt3KoLawq";
+        } else
+        if(winningID == nft1) {
+            nftImage = "https://ipfs.io/ipfs/QmZUGz2U1NcKagcQBsVSQXJNPgAfxRegFzvVUiCq49ibTP";
+        } else
+        if(winningID == nft2) {
+            nftImage = "https://ipfs.io/ipfs/QmRbtiMiCoAx3cJVXrHKwJfD7nGDgqbrcnzDWZt3KoLawq";
+        } else
+        if(winningID == nft3) {
+            nftImage = "https://ipfs.io/ipfs/QmRbtiMiCoAx3cJVXrHKwJfD7nGDgqbrcnzDWZt3KoLawq";
+        } else
+        if(winningID == nft4) {
+            nftImage = "https://ipfs.io/ipfs/QmZUGz2U1NcKagcQBsVSQXJNPgAfxRegFzvVUiCq49ibTP";
+        } else
+        if(winningID == nft5) {
+            nftImage = "https://ipfs.io/ipfs/QmRbtiMiCoAx3cJVXrHKwJfD7nGDgqbrcnzDWZt3KoLawq";
+        } else
+        if(winningID == nft6) {
+            nftImage = "https://ipfs.io/ipfs/QmZUGz2U1NcKagcQBsVSQXJNPgAfxRegFzvVUiCq49ibTP";
+        } else
+        if(winningID == nft7) {
+            nftImage = "https://ipfs.io/ipfs/QmRbtiMiCoAx3cJVXrHKwJfD7nGDgqbrcnzDWZt3KoLawq";
+        } else
+        if(winningID == nft8) {
+            nftImage = "https://ipfs.io/ipfs/QmZUGz2U1NcKagcQBsVSQXJNPgAfxRegFzvVUiCq49ibTP";
+        } else
+        if(winningID == nft9) {
+            nftImage = "https://ipfs.io/ipfs/QmRbtiMiCoAx3cJVXrHKwJfD7nGDgqbrcnzDWZt3KoLawq";
+        } else
+        if(winningID == nft10) {
+            nftImage = "https://ipfs.io/ipfs/QmRbtiMiCoAx3cJVXrHKwJfD7nGDgqbrcnzDWZt3KoLawq";
+        } else
+        if(winningID == nft11) {
+            nftImage = "https://ipfs.io/ipfs/QmZUGz2U1NcKagcQBsVSQXJNPgAfxRegFzvVUiCq49ibTP";
+        } else
+        if(winningID == nft12) {
+            nftImage = "https://ipfs.io/ipfs/QmRbtiMiCoAx3cJVXrHKwJfD7nGDgqbrcnzDWZt3KoLawq";
+        } else
+        if(winningID == nft13) {
+            nftImage = "https://ipfs.io/ipfs/QmRbtiMiCoAx3cJVXrHKwJfD7nGDgqbrcnzDWZt3KoLawq";
+        } else
+        if(winningID == nft14) {
+            nftImage = "https://ipfs.io/ipfs/QmZUGz2U1NcKagcQBsVSQXJNPgAfxRegFzvVUiCq49ibTP";
+        } else
+        if(winningID == nft15) {
+            nftImage = "https://ipfs.io/ipfs/QmRbtiMiCoAx3cJVXrHKwJfD7nGDgqbrcnzDWZt3KoLawq";
+        } else
+        if(winningID == nft16) {
+            nftImage = "https://ipfs.io/ipfs/QmZUGz2U1NcKagcQBsVSQXJNPgAfxRegFzvVUiCq49ibTP";
+        } else
+        if(winningID == nft17) {
+            nftImage = "https://ipfs.io/ipfs/QmRbtiMiCoAx3cJVXrHKwJfD7nGDgqbrcnzDWZt3KoLawq";
+        } else
+        if(winningID == nft18) {
+            nftImage = "https://ipfs.io/ipfs/QmZUGz2U1NcKagcQBsVSQXJNPgAfxRegFzvVUiCq49ibTP";
+        } else
+        if(winningID == nft19) {
+            nftImage = "https://ipfs.io/ipfs/QmRbtiMiCoAx3cJVXrHKwJfD7nGDgqbrcnzDWZt3KoLawq";
+        } else
+        if(winningID == nft20) {
+            nftImage = "https://ipfs.io/ipfs/QmRbtiMiCoAx3cJVXrHKwJfD7nGDgqbrcnzDWZt3KoLawq";
+        } else
+        if(winningID == nft21) {
+            nftImage = "https://ipfs.io/ipfs/QmZUGz2U1NcKagcQBsVSQXJNPgAfxRegFzvVUiCq49ibTP";
+        } else
+        if(winningID == nft22) {
+            nftImage = "https://ipfs.io/ipfs/QmRbtiMiCoAx3cJVXrHKwJfD7nGDgqbrcnzDWZt3KoLawq";
+        } else
+        if(winningID == nft23) {
+            nftImage = "https://ipfs.io/ipfs/QmRbtiMiCoAx3cJVXrHKwJfD7nGDgqbrcnzDWZt3KoLawq";
+        } else
+        if(winningID == nft24) {
+            nftImage = "https://ipfs.io/ipfs/QmZUGz2U1NcKagcQBsVSQXJNPgAfxRegFzvVUiCq49ibTP";
+        } else
+        if(winningID == nft25) {
+            nftImage = "https://ipfs.io/ipfs/QmRbtiMiCoAx3cJVXrHKwJfD7nGDgqbrcnzDWZt3KoLawq";
+        } else
+        if(winningID == nft26) {
+            nftImage = "https://ipfs.io/ipfs/QmZUGz2U1NcKagcQBsVSQXJNPgAfxRegFzvVUiCq49ibTP";
+        } else
+        if(winningID == nft27) {
+            nftImage = "https://ipfs.io/ipfs/QmRbtiMiCoAx3cJVXrHKwJfD7nGDgqbrcnzDWZt3KoLawq";
+        } else
+        if(winningID == nft28) {
+            nftImage = "https://ipfs.io/ipfs/QmZUGz2U1NcKagcQBsVSQXJNPgAfxRegFzvVUiCq49ibTP";
+        } else
+        if(winningID == nft29) {
+            nftImage = "https://ipfs.io/ipfs/QmRbtiMiCoAx3cJVXrHKwJfD7nGDgqbrcnzDWZt3KoLawq";
+        } else
+        if(winningID == nft30) {
+            nftImage = "https://ipfs.io/ipfs/QmRbtiMiCoAx3cJVXrHKwJfD7nGDgqbrcnzDWZt3KoLawq";
+        } else
+        if(winningID == nft31) {
+            nftImage = "https://ipfs.io/ipfs/QmZUGz2U1NcKagcQBsVSQXJNPgAfxRegFzvVUiCq49ibTP";
+        } else
+        if(winningID == nft32) {
+            nftImage = "https://ipfs.io/ipfs/QmRbtiMiCoAx3cJVXrHKwJfD7nGDgqbrcnzDWZt3KoLawq";
+        } else
+        if(winningID == nft33) {
+            nftImage = "https://ipfs.io/ipfs/QmRbtiMiCoAx3cJVXrHKwJfD7nGDgqbrcnzDWZt3KoLawq";
+        } else
+        if(winningID == nft34) {
+            nftImage = "https://ipfs.io/ipfs/QmZUGz2U1NcKagcQBsVSQXJNPgAfxRegFzvVUiCq49ibTP";
+        } else
+        if(winningID == nft35) {
+            nftImage = "https://ipfs.io/ipfs/QmRbtiMiCoAx3cJVXrHKwJfD7nGDgqbrcnzDWZt3KoLawq";
+        } else
+        if(winningID == nft36) {
+            nftImage = "https://ipfs.io/ipfs/QmZUGz2U1NcKagcQBsVSQXJNPgAfxRegFzvVUiCq49ibTP";
+        } else
+        if(winningID == nft37) {
+            nftImage = "https://ipfs.io/ipfs/QmRbtiMiCoAx3cJVXrHKwJfD7nGDgqbrcnzDWZt3KoLawq";
+        } else
+        if(winningID == nft38) {
+            nftImage = "https://ipfs.io/ipfs/QmZUGz2U1NcKagcQBsVSQXJNPgAfxRegFzvVUiCq49ibTP";
+        } else
+        if(winningID == nft39) {
+            nftImage = "https://ipfs.io/ipfs/QmRbtiMiCoAx3cJVXrHKwJfD7nGDgqbrcnzDWZt3KoLawq";
+        } else
+        if(winningID == nft40) {
+            nftImage = "https://ipfs.io/ipfs/QmRbtiMiCoAx3cJVXrHKwJfD7nGDgqbrcnzDWZt3KoLawq";
+        } else
+        if(winningID == nft41) {
+            nftImage = "https://ipfs.io/ipfs/QmZUGz2U1NcKagcQBsVSQXJNPgAfxRegFzvVUiCq49ibTP";
+        } else
+        if(winningID == nft42) {
+            nftImage = "https://ipfs.io/ipfs/QmRbtiMiCoAx3cJVXrHKwJfD7nGDgqbrcnzDWZt3KoLawq";
+        } else
+        if(winningID == nft43) {
+            nftImage = "https://ipfs.io/ipfs/QmRbtiMiCoAx3cJVXrHKwJfD7nGDgqbrcnzDWZt3KoLawq";
+        } else
+        if(winningID == nft44) {
+            nftImage = "https://ipfs.io/ipfs/QmZUGz2U1NcKagcQBsVSQXJNPgAfxRegFzvVUiCq49ibTP";
+        } else
+        if(winningID == nft45) {
+            nftImage = "https://ipfs.io/ipfs/QmRbtiMiCoAx3cJVXrHKwJfD7nGDgqbrcnzDWZt3KoLawq";
+        } else
+        if(winningID == nft46) {
+            nftImage = "https://ipfs.io/ipfs/QmZUGz2U1NcKagcQBsVSQXJNPgAfxRegFzvVUiCq49ibTP";
+        } else
+        if(winningID == nft47) {
+            nftImage = "https://ipfs.io/ipfs/QmRbtiMiCoAx3cJVXrHKwJfD7nGDgqbrcnzDWZt3KoLawq";
+        } else
+        if(winningID == nft48) {
+            nftImage = "https://ipfs.io/ipfs/QmZUGz2U1NcKagcQBsVSQXJNPgAfxRegFzvVUiCq49ibTP";
+        } else
+        if(winningID == nft49) {
+            nftImage = "https://ipfs.io/ipfs/QmRbtiMiCoAx3cJVXrHKwJfD7nGDgqbrcnzDWZt3KoLawq";
+        } else
+        if(winningID == nft50) {
+            nftImage = "https://ipfs.io/ipfs/QmRbtiMiCoAx3cJVXrHKwJfD7nGDgqbrcnzDWZt3KoLawq";
+        } else
+        if(winningID == nft51) {
+            nftImage = "https://ipfs.io/ipfs/QmZUGz2U1NcKagcQBsVSQXJNPgAfxRegFzvVUiCq49ibTP";
+        } else
+        if(winningID == nft52) {
+            nftImage = "https://ipfs.io/ipfs/QmRbtiMiCoAx3cJVXrHKwJfD7nGDgqbrcnzDWZt3KoLawq";
+        } else
+        if(winningID == nft53) {
+            nftImage = "https://ipfs.io/ipfs/QmRbtiMiCoAx3cJVXrHKwJfD7nGDgqbrcnzDWZt3KoLawq";
+        } else
+        if(winningID == nft54) {
+            nftImage = "https://ipfs.io/ipfs/QmZUGz2U1NcKagcQBsVSQXJNPgAfxRegFzvVUiCq49ibTP";
+        } else
+        if(winningID == nft55) {
+            nftImage = "https://ipfs.io/ipfs/QmRbtiMiCoAx3cJVXrHKwJfD7nGDgqbrcnzDWZt3KoLawq";
+        } else
+        if(winningID == nft56) {
+            nftImage = "https://ipfs.io/ipfs/QmZUGz2U1NcKagcQBsVSQXJNPgAfxRegFzvVUiCq49ibTP";
+        } else
+        if(winningID == nft57) {
+            nftImage = "https://ipfs.io/ipfs/QmRbtiMiCoAx3cJVXrHKwJfD7nGDgqbrcnzDWZt3KoLawq";
+        } else
+        if(winningID == nft58) {
+            nftImage = "https://ipfs.io/ipfs/QmZUGz2U1NcKagcQBsVSQXJNPgAfxRegFzvVUiCq49ibTP";
+        } else
+        if(winningID == nft59) {
+            nftImage = "https://ipfs.io/ipfs/QmRbtiMiCoAx3cJVXrHKwJfD7nGDgqbrcnzDWZt3KoLawq";
+        } else
+        if(winningID == nft60) {
+            nftImage = "https://ipfs.io/ipfs/QmRbtiMiCoAx3cJVXrHKwJfD7nGDgqbrcnzDWZt3KoLawq";
+        } else
+        if(winningID == nft61) {
+            nftImage = "https://ipfs.io/ipfs/QmZUGz2U1NcKagcQBsVSQXJNPgAfxRegFzvVUiCq49ibTP";
+        } else
+        if(winningID == nft62) {
+            nftImage = "https://ipfs.io/ipfs/QmRbtiMiCoAx3cJVXrHKwJfD7nGDgqbrcnzDWZt3KoLawq";
+        } else
+        if(winningID == nft63) {
+            nftImage = "https://ipfs.io/ipfs/QmRbtiMiCoAx3cJVXrHKwJfD7nGDgqbrcnzDWZt3KoLawq";
+        } else
+        if(winningID == nft64) {
+            nftImage = "https://ipfs.io/ipfs/QmZUGz2U1NcKagcQBsVSQXJNPgAfxRegFzvVUiCq49ibTP";
+        } else
+        if(winningID == nft65) {
+            nftImage = "https://ipfs.io/ipfs/QmRbtiMiCoAx3cJVXrHKwJfD7nGDgqbrcnzDWZt3KoLawq";
+        } else
+        if(winningID == nft66) {
+            nftImage = "https://ipfs.io/ipfs/QmZUGz2U1NcKagcQBsVSQXJNPgAfxRegFzvVUiCq49ibTP";
+        } else
+        if(winningID == nft67) {
+            nftImage = "https://ipfs.io/ipfs/QmRbtiMiCoAx3cJVXrHKwJfD7nGDgqbrcnzDWZt3KoLawq";
+        } else
+        if(winningID == nft68) {
+            nftImage = "https://ipfs.io/ipfs/QmZUGz2U1NcKagcQBsVSQXJNPgAfxRegFzvVUiCq49ibTP";
+        } else
+        if(winningID == nft69) {
+            nftImage = "https://ipfs.io/ipfs/QmRbtiMiCoAx3cJVXrHKwJfD7nGDgqbrcnzDWZt3KoLawq";
+        } else
+        if(winningID == nft70) {
+            nftImage = "https://ipfs.io/ipfs/QmRbtiMiCoAx3cJVXrHKwJfD7nGDgqbrcnzDWZt3KoLawq";
+        } else
+        if(winningID == nft71) {
+            nftImage = "https://ipfs.io/ipfs/QmZUGz2U1NcKagcQBsVSQXJNPgAfxRegFzvVUiCq49ibTP";
+        } else
+        if(winningID == nft72) {
+            nftImage = "https://ipfs.io/ipfs/QmRbtiMiCoAx3cJVXrHKwJfD7nGDgqbrcnzDWZt3KoLawq";
+        } else
+        if(winningID == nft73) {
+            nftImage = "https://ipfs.io/ipfs/QmRbtiMiCoAx3cJVXrHKwJfD7nGDgqbrcnzDWZt3KoLawq";
+        } else
+        if(winningID == nft74) {
+            nftImage = "https://ipfs.io/ipfs/QmZUGz2U1NcKagcQBsVSQXJNPgAfxRegFzvVUiCq49ibTP";
+        } else
+        if(winningID == nft75) {
+            nftImage = "https://ipfs.io/ipfs/QmRbtiMiCoAx3cJVXrHKwJfD7nGDgqbrcnzDWZt3KoLawq";
+        } else
+        if(winningID == nft76) {
+            nftImage = "https://ipfs.io/ipfs/QmZUGz2U1NcKagcQBsVSQXJNPgAfxRegFzvVUiCq49ibTP";
+        } else
+        if(winningID == nft77) {
+            nftImage = "https://ipfs.io/ipfs/QmRbtiMiCoAx3cJVXrHKwJfD7nGDgqbrcnzDWZt3KoLawq";
+        } else
+        if(winningID == nft78) {
+            nftImage = "https://ipfs.io/ipfs/QmZUGz2U1NcKagcQBsVSQXJNPgAfxRegFzvVUiCq49ibTP";
+        } else
+        if(winningID == nft79) {
+            nftImage = "https://ipfs.io/ipfs/QmRbtiMiCoAx3cJVXrHKwJfD7nGDgqbrcnzDWZt3KoLawq";
+        } else
+        if(winningID == nft80) {
+            nftImage = "https://ipfs.io/ipfs/QmRbtiMiCoAx3cJVXrHKwJfD7nGDgqbrcnzDWZt3KoLawq";
+        } else
+        if(winningID == nft81) {
+            nftImage = "https://ipfs.io/ipfs/QmZUGz2U1NcKagcQBsVSQXJNPgAfxRegFzvVUiCq49ibTP";
+        } else
+        if(winningID == nft82) {
+            nftImage = "https://ipfs.io/ipfs/QmRbtiMiCoAx3cJVXrHKwJfD7nGDgqbrcnzDWZt3KoLawq";
+        } else
+        if(winningID == nft83) {
+            nftImage = "https://ipfs.io/ipfs/QmRbtiMiCoAx3cJVXrHKwJfD7nGDgqbrcnzDWZt3KoLawq";
+        } else
+        if(winningID == nft84) {
+            nftImage = "https://ipfs.io/ipfs/QmZUGz2U1NcKagcQBsVSQXJNPgAfxRegFzvVUiCq49ibTP";
+        } else
+        if(winningID == nft85) {
+            nftImage = "https://ipfs.io/ipfs/QmRbtiMiCoAx3cJVXrHKwJfD7nGDgqbrcnzDWZt3KoLawq";
+        } else
+        if(winningID == nft86) {
+            nftImage = "https://ipfs.io/ipfs/QmZUGz2U1NcKagcQBsVSQXJNPgAfxRegFzvVUiCq49ibTP";
+        } else
+        if(winningID == nft87) {
+            nftImage = "https://ipfs.io/ipfs/QmRbtiMiCoAx3cJVXrHKwJfD7nGDgqbrcnzDWZt3KoLawq";
+        } else
+        if(winningID == nft88) {
+            nftImage = "https://ipfs.io/ipfs/QmZUGz2U1NcKagcQBsVSQXJNPgAfxRegFzvVUiCq49ibTP";
+        } else
+        if(winningID == nft89) {
+            nftImage = "https://ipfs.io/ipfs/QmRbtiMiCoAx3cJVXrHKwJfD7nGDgqbrcnzDWZt3KoLawq";
+        } else
+        if(winningID == nft90) {
+            nftImage = "https://ipfs.io/ipfs/QmRbtiMiCoAx3cJVXrHKwJfD7nGDgqbrcnzDWZt3KoLawq";
+        } else
+        if(winningID == nft91) {
+            nftImage = "https://ipfs.io/ipfs/QmZUGz2U1NcKagcQBsVSQXJNPgAfxRegFzvVUiCq49ibTP";
+        } else
+        if(winningID == nft92) {
+            nftImage = "https://ipfs.io/ipfs/QmRbtiMiCoAx3cJVXrHKwJfD7nGDgqbrcnzDWZt3KoLawq";
+        } else
+        if(winningID == nft93) {
+            nftImage = "https://ipfs.io/ipfs/QmRbtiMiCoAx3cJVXrHKwJfD7nGDgqbrcnzDWZt3KoLawq";
+        } else
+        if(winningID == nft94) {
+            nftImage = "https://ipfs.io/ipfs/QmZUGz2U1NcKagcQBsVSQXJNPgAfxRegFzvVUiCq49ibTP";
+        } else
+        if(winningID == nft95) {
+            nftImage = "https://ipfs.io/ipfs/QmRbtiMiCoAx3cJVXrHKwJfD7nGDgqbrcnzDWZt3KoLawq";
+        } else
+        if(winningID == nft96) {
+            nftImage = "https://ipfs.io/ipfs/QmZUGz2U1NcKagcQBsVSQXJNPgAfxRegFzvVUiCq49ibTP";
+        } else
+        if(winningID == nft97) {
+            nftImage = "https://ipfs.io/ipfs/QmRbtiMiCoAx3cJVXrHKwJfD7nGDgqbrcnzDWZt3KoLawq";
+        } else
+        if(winningID == nft98) {
+            nftImage = "https://ipfs.io/ipfs/QmZUGz2U1NcKagcQBsVSQXJNPgAfxRegFzvVUiCq49ibTP";
+        } else
+        if(winningID == nft99) {
+            nftImage = "https://ipfs.io/ipfs/QmRbtiMiCoAx3cJVXrHKwJfD7nGDgqbrcnzDWZt3KoLawq";
+        } else
+        if(winningID == undefined) {
+            nftImage = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAJpy2kVX06O32FzVWAVgctoZ-UxDwGsApdA&usqp=CAU";
+        }
+
+        document.getElementById('nftImage').src = nftImage;
+    }
+
+    var nft0 = 1;
+
+    var nft1 = 2;
+
+    var nft2 = 3;
+
+    var nft3 = 4;
+
+    var nft4 = 5;
+
+    var nft5 = 6;
+
+    var nft6 = 7;
+
+    var nft7 = 8;
+
+    var nft8 = 9;
+
+    var nft9 = 10;
+
+    var nft10 = 11;
+
+    var nft11 = 12;
+
+    var nft12 = 13;
+
+    var nft13 = 14;
+
+    var nft14 = 0;
+
+    var nft15 = 0;
+
+    var nft16 = 0;
+
+    var nft17 = 0;
+
+    var nft18 = 0;
+
+    var nft19 = 0;
+
+    var nft20 = 0;
+
+    var nft21 = 0;
+
+    var nft22 = 0;
+
+    var nft23 = 0;
+
+    var nft24 = 0;
+
+    var nft25 = 0;
+
+    var nft26 = 0;
+
+    var nft27 = 0;
+
+    var nft28 = 0;
+
+    var nft29 = 0;
+
+    var nft30 = 0;
+
+    var nft31 = 0;
+
+    var nft32 = 0;
+
+    var nft33 = 0;
+
+    var nft34 = 0;
+
+    var nft35 = 0;
+
+    var nft36 = 0;
+
+    var nft37 = 0;
+
+    var nft38 = 0;
+
+    var nft39 = 0;
+
+    var nft40 = 0;
+
+    var nft41 = 0;
+
+    var nft42 = 0;
+
+    var nft43 = 0;
+
+    var nft44 = 0;
+
+    var nft45 = 0;
+
+    var nft46 = 0;
+
+    var nft47 = 0;
+
+    var nft48 = 0;
+
+    var nft49 = 0;
+
+    var nft50 = 0;
+
+    var nft51 = 0;
+
+    var nft52 = 0;
+
+    var nft53 = 0;
+
+    var nft54 = 0;
+
+    var nft55 = 0;
+
+    var nft56 = 0;
+
+    var nft57 = 0;
+
+    var nft58 = 0;
+
+    var nft59 = 0;
+
+    var nft60 = 0;
+
+    var nft61 = 0;
+
+    var nft62 = 0;
+
+    var nft63 = 0;
+
+    var nft64 = 0;
+
+    var nft65 = 0;
+
+    var nft66 = 0;
+
+    var nft67 = 0;
+
+    var nft68 = 0;
+
+    var nft69 = 0;
+
+    var nft70 = 0;
+
+    var nft71 = 0;
+
+    var nft72 = 0;
+
+    var nft73 = 0;
+
+    var nft74 = 0;
+
+    var nft75 = 0;
+
+    var nft76 = 0;
+
+    var nft77 = 0;
+
+    var nft78 = 0;
+
+    var nft79 = 0;
+
+    var nft80 = 0;
+
+    var nft81 = 0;
+
+    var nft82 = 0;
+
+    var nft83 = 0;
+
+    var nft84 = 0;
+
+    var nft85 = 0;
+
+    var nft86 = 0;
+
+    var nft87 = 0;
+
+    var nft88 = 0;
+
+    var nft89 = 0;
+
+    var nft90 = 0;
+
+    var nft91 = 0;
+
+    var nft92 = 0;
+
+    var nft93 = 0;
+
+    var nft94 = 0;
+
+    var nft95 = 0;
+
+    var nft96 = 0;
+
+    var nft97 = 0;
+
+    var nft98 = 0;
+
+    var nft99 = 0;
 
     //CONTRACT ABI AND ADDRESS
     //
