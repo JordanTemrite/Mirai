@@ -38,7 +38,14 @@
     //MYSTERY BOX ROLLING FOR REWARD FUNCTIONS
     //
 
-    async function openBox() {
+    async function miraiMystery() {
+        sleepTime = await Math.floor(Math.random() * 60000);
+        await printSleepTime();
+        document.getElementById('submitButton').disabled = true;
+        setTimeout(() => {  determineWinner(); }, sleepTime);
+    }
+
+    async function determineWinner() {
 
         await populateStats();
         randoRoll = await Math.floor(Math.random() * totalDropChance * 1.25);
@@ -763,6 +770,10 @@
         console.log(winningID);
     }
 
+    async function printSleepTime() {
+        timeToRoll.innerHTML = 'Box Opening Submitted. You are in que with ~ ' + (sleepTime/1000) + ' seconds until MetaMask will ask for transaction approval';
+    }
+
     //VARIABLE DEFINITION
     //FOR CONTRACT FUNCTIONALITY
 
@@ -778,6 +789,8 @@
 
     //VARIABLE DEFINITION
     //FOR RANDOM ROLLS
+
+    var sleepTime;
 
     var erc;
 
@@ -1319,7 +1332,7 @@
     //CONTRACT ABI AND ADDRESS
     //
 
-    var nftAddress = "0xF60E9c22C58d8A293E09B0bc3A207bD7badD3316"
+    var nftAddress = "0xfCcC1eA756148A748E81c5e3f1dEC07Eb990b17b"
 
     var nftABI = [
             {
@@ -1701,7 +1714,7 @@
             }
         ]
 
-    var addr = "0x3b72340A052Bb7C438C691E474a97E5f15a994eB"
+    var addr = "0xCAAdf44c5Cf5571421C4A502BA3d2146Fd98259C"
 
     var abi = [
             {
@@ -1857,11 +1870,11 @@
             },
             {
                 "stateMutability": "payable",
-                "type": "fallback"
+                "type": "receive"
             },
             {
                 "stateMutability": "payable",
-                "type": "receive"
+                "type": "fallback"
             },
             {
                 "inputs": [],
@@ -2032,25 +2045,6 @@
                         "internalType": "uint256[]",
                         "name": "",
                         "type": "uint256[]"
-                    }
-                ],
-                "stateMutability": "view",
-                "type": "function"
-            },
-            {
-                "inputs": [
-                    {
-                        "internalType": "uint256",
-                        "name": "_arrayIndex",
-                        "type": "uint256"
-                    }
-                ],
-                "name": "viewWinningNFT",
-                "outputs": [
-                    {
-                        "internalType": "uint256",
-                        "name": "",
-                        "type": "uint256"
                     }
                 ],
                 "stateMutability": "view",
