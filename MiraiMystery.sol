@@ -1291,13 +1291,11 @@ contract MiraiMystery is Ownable {
     function totalDropRate() public view returns(uint256) {
         uint256 sum = 0;
         for(uint i = 0; i < nftDropRate.length; i++) {
-            sum += nftDropRate[i];
+            if(nftDropRate[i] > sum) {
+                sum = nftDropRate[i];
+            }
         }
         return sum;
-    }
-    
-    function viewWinningNFT(uint256 _arrayIndex) public view returns(uint256) {
-        return nftID[_arrayIndex];
     }
     
     function viewAvailableNFTs() public view returns(uint256[] memory) {
