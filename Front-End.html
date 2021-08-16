@@ -48,7 +48,7 @@
     async function determineWinner() {
 
         await populateStats();
-        randoRoll = await Math.floor(Math.random() * totalDropChance * 1.25);
+        randoRoll = await Math.floor(Math.random() * totalDropChance * 1.15);
         const accounts = await getCurrentAccount();
 
         //DEFINITION OF WINNING ROLLS
